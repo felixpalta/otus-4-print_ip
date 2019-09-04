@@ -1,0 +1,11 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="true_type",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="otus::is_sequential\l_container\< std::list\l\< T, Alloc \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structotus_1_1is__sequential__container_3_01std_1_1list_3_01T_00_01Alloc_01_4_01_4.html",tooltip="Positive case for std::list type trait. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="otus::is_sequential\l_container\< std::vector\l\< T, Alloc \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structotus_1_1is__sequential__container_3_01std_1_1vector_3_01T_00_01Alloc_01_4_01_4.html",tooltip="Positive case for std::vector type trait. "];
+}
