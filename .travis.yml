@@ -17,5 +17,4 @@ deploy:
     local_dir: doc_doxygen
     verbose: true
     keep_history: true
-    on:
-        branch: master
+    
