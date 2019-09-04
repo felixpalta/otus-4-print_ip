@@ -8,10 +8,10 @@ script:
 - ctest --output-on-failure
 - cmake --build . --target package
 deploy:
-    - provider: script
+  - provider: script
     skip_cleanup: true
     script: curl -v --fail --show-error -T print_ip-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -ufelixpalta:$BINTRAY_API_KEY "https://api.bintray.com/content/felixpalta/otus-cpp-repo/print_ip/$TRAVIS_BUILD_NUMBER/print_ip-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=stretch;deb_component=main;deb_architecture=amd64"
-    - provider: pages
+  - provider: pages
     skip_cleanup: true
     github_token: $GITHUB_PAGES_TOKEN
     local_dir: doc_doxygen
