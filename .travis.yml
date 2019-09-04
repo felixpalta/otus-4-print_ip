@@ -7,6 +7,7 @@ script:
 - cmake --build .
 - ctest --output-on-failure
 - cmake --build . --target package
+- cmake --build . --target doc_doxygen
 deploy:
   - provider: script
     skip_cleanup: true
@@ -14,7 +15,7 @@ deploy:
   - provider: pages
     skip_cleanup: true
     github_token: $GITHUB_PAGES_TOKEN
-    local_dir: doc_doxygen
+    local_dir:  $TRAVIS_BUILD_DIR/doc_doxygen/html
     verbose: true
     keep_history: true
     
