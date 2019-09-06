@@ -26,7 +26,7 @@ TEST_F(OssFixture, IntTest) {
 }
 
 TEST_F(OssFixture, StringTest) {
-    auto s = "foobar";
+    std::string s = "foobar";
     p.print(s);
     ASSERT_EQ(s, oss.str());
 }

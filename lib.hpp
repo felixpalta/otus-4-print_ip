@@ -8,6 +8,21 @@
 namespace otus {
 
 /**
+ * @brief Default (negative) case for string type
+ */
+template <typename T>
+struct is_string : public std::false_type
+{};
+
+/**
+ * @brief Positive case for std::vector type trait
+ */
+template <>
+template <typename CharType, typename Traits, typename Alloc>
+struct is_string<std::basic_string<CharType, Traits, Alloc>> : public std::true_type
+{};
+
+/**
  * @brief Default (negative) case for STL container type trait
  */
 template <typename T>
@@ -71,7 +86,8 @@ struct IpPrinter
      * @brief Implementation for string IPs
      * @param ip Input string
      */
-    void print(const std::string & ip) const {
+    template <typename T, std::enable_if_t<is_string<T>::value>* = nullptr>
+    void print(T ip) const {
         _os << ip;
         if (!_lineEnd.empty())
             _os << _lineEnd;
