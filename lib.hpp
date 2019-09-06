@@ -40,7 +40,7 @@ struct IpPrinter
      * @param os Output string stream
      * @param newLine If true, will put new line after print
      */
-    IpPrinter(std::ostream & os, bool newLine = false) : _os(os), _newLine(newLine) {}
+    IpPrinter(std::ostream & os, std::string lineEnd = std::string()) : _os(os), _lineEnd(lineEnd) {}
 
     /**
      * @brief Implementation for integral types
@@ -63,8 +63,8 @@ struct IpPrinter
                 _os << ".";
             _os << octet;
         }
-        if (_newLine)
-            _os << std::endl;
+        if (!_lineEnd.empty())
+            _os << _lineEnd;
     }
 
     /**
@@ -73,8 +73,8 @@ struct IpPrinter
      */
     void print(const std::string & ip) const {
         _os << ip;
-        if (_newLine)
-            _os << std::endl;
+        if (!_lineEnd.empty())
+            _os << _lineEnd;
     }
 
     /**
@@ -84,19 +84,19 @@ struct IpPrinter
     template <typename T, std::enable_if_t<is_sequential_container<T>::value, void*> = nullptr>
     void print(T cont) const {
         bool first = true;
-        for (auto c : cont) {
+        for (const auto & c : cont) {
             if (first)
                 first = false;
             else
                 _os << ".";
             _os << c;
         }
-        if (_newLine)
-            _os << std::endl;
+        if (!_lineEnd.empty())
+            _os << _lineEnd;
     }
 private:
     std::ostream & _os;
-    bool _newLine;
+    std::string _lineEnd;
 };
 
 } // otus

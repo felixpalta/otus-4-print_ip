@@ -4,7 +4,7 @@
 
 class OssFixture :  public ::testing::Test {
 public:
-    OssFixture() : p(oss, false) {}
+    OssFixture() : p(oss) {}
 protected:
     std::ostringstream oss;
     const otus::IpPrinter p;

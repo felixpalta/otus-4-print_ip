@@ -4,7 +4,7 @@
 int main() {
     using namespace otus;
 
-    IpPrinter p(std::cout, /*newLine*/ true);
+    IpPrinter p(std::cout, "\n");
     p.print(char(-1));
     p.print(short(0));
     p.print(int(2130706433));
