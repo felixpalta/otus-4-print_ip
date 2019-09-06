@@ -46,7 +46,7 @@ struct IpPrinter
      * @brief Implementation for integral types
      * @param val Input integral value
      */
-    template <typename T, std::enable_if_t<std::is_integral<T>::value, void*> = nullptr >
+    template <typename T, std::enable_if_t<std::is_integral<T>::value>* = nullptr >
     void print(T val) const {
         typedef typename std::make_unsigned<T>::type value_type;
         value_type uVal = val;
@@ -81,7 +81,7 @@ struct IpPrinter
      * @brief Implementation for STL sequential containers
      * @param cont Input container
      */
-    template <typename T, std::enable_if_t<is_sequential_container<T>::value, void*> = nullptr>
+    template <typename T, std::enable_if_t<is_sequential_container<T>::value>* = nullptr>
     void print(T cont) const {
         bool first = true;
         for (const auto & c : cont) {
