@@ -102,17 +102,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4b8a96077b7de634228b910a344ca429"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus_1_1IpPrinter.html#a4b8a96077b7de634228b910a344ca429">IpPrinter</a> (std::ostream &amp;os, bool newLine=false)</td></tr>
-<tr class="memdesc:a4b8a96077b7de634228b910a344ca429"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structotus_1_1IpPrinter.html" title="Class for printing different types of IP adresses. ">IpPrinter</a>.  <a href="#a4b8a96077b7de634228b910a344ca429">More...</a><br /></td></tr>
-<tr class="separator:a4b8a96077b7de634228b910a344ca429"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5031164b2db30ad98e67b29ff11fb514"><td class="memTemplParams" colspan="2">template&lt;typename T , std::enable_if_t&lt; std::is_integral&lt; T &gt;::value, void * &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a8391715b26075888d2286836734e6b94"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus_1_1IpPrinter.html#a8391715b26075888d2286836734e6b94">IpPrinter</a> (std::ostream &amp;os, std::string lineEnd=std::string())</td></tr>
+<tr class="memdesc:a8391715b26075888d2286836734e6b94"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structotus_1_1IpPrinter.html" title="Class for printing different types of IP adresses. ">IpPrinter</a>.  <a href="#a8391715b26075888d2286836734e6b94">More...</a><br /></td></tr>
+<tr class="separator:a8391715b26075888d2286836734e6b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5031164b2db30ad98e67b29ff11fb514"><td class="memTemplParams" colspan="2">template&lt;typename T , std::enable_if_t&lt; std::is_integral&lt; T &gt;::value &gt; *  = nullptr&gt; </td></tr>
 <tr class="memitem:a5031164b2db30ad98e67b29ff11fb514"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structotus_1_1IpPrinter.html#a5031164b2db30ad98e67b29ff11fb514">print</a> (T val) const </td></tr>
 <tr class="memdesc:a5031164b2db30ad98e67b29ff11fb514"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation for integral types.  <a href="#a5031164b2db30ad98e67b29ff11fb514">More...</a><br /></td></tr>
 <tr class="separator:a5031164b2db30ad98e67b29ff11fb514"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca6e96aacbaa35aecaeec8eda10c6088"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus_1_1IpPrinter.html#aca6e96aacbaa35aecaeec8eda10c6088">print</a> (const std::string &amp;ip) const </td></tr>
-<tr class="memdesc:aca6e96aacbaa35aecaeec8eda10c6088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation for string IPs.  <a href="#aca6e96aacbaa35aecaeec8eda10c6088">More...</a><br /></td></tr>
-<tr class="separator:aca6e96aacbaa35aecaeec8eda10c6088"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4426ffee89326b9205986b843a0d8efd"><td class="memTemplParams" colspan="2">template&lt;typename T , std::enable_if_t&lt; is_sequential_container&lt; T &gt;::value, void * &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a9d386b7de1d225849a6a07f910dcc2d5"><td class="memTemplParams" colspan="2">template&lt;typename T , std::enable_if_t&lt; is_string_like&lt; T &gt;::value &gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:a9d386b7de1d225849a6a07f910dcc2d5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structotus_1_1IpPrinter.html#a9d386b7de1d225849a6a07f910dcc2d5">print</a> (T ip) const </td></tr>
+<tr class="memdesc:a9d386b7de1d225849a6a07f910dcc2d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation for string IPs.  <a href="#a9d386b7de1d225849a6a07f910dcc2d5">More...</a><br /></td></tr>
+<tr class="separator:a9d386b7de1d225849a6a07f910dcc2d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4426ffee89326b9205986b843a0d8efd"><td class="memTemplParams" colspan="2">template&lt;typename T , std::enable_if_t&lt; is_sequential_container&lt; T &gt;::value &gt; *  = nullptr&gt; </td></tr>
 <tr class="memitem:a4426ffee89326b9205986b843a0d8efd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structotus_1_1IpPrinter.html#a4426ffee89326b9205986b843a0d8efd">print</a> (T cont) const </td></tr>
 <tr class="memdesc:a4426ffee89326b9205986b843a0d8efd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation for STL sequential containers.  <a href="#a4426ffee89326b9205986b843a0d8efd">More...</a><br /></td></tr>
 <tr class="separator:a4426ffee89326b9205986b843a0d8efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,7 +121,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for printing different types of IP adresses. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a4b8a96077b7de634228b910a344ca429"></a>
+<a class="anchor" id="a8391715b26075888d2286836734e6b94"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -136,8 +137,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>newLine</em> = <code>false</code>&#160;</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>lineEnd</em> = <code>std::string()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -168,7 +169,7 @@ Public Member Functions</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , std::enable_if_t&lt; std::is_integral&lt; T &gt;::value, void * &gt;  = nullptr&gt; </div>
+template&lt;typename T , std::enable_if_t&lt; std::is_integral&lt; T &gt;::value &gt; *  = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -198,9 +199,11 @@ template&lt;typename T , std::enable_if_t&lt; std::is_integral&lt; T &gt;::value
 
 </div>
 </div>
-<a class="anchor" id="aca6e96aacbaa35aecaeec8eda10c6088"></a>
+<a class="anchor" id="a9d386b7de1d225849a6a07f910dcc2d5"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , std::enable_if_t&lt; is_string_like&lt; T &gt;::value &gt; *  = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -208,7 +211,7 @@ template&lt;typename T , std::enable_if_t&lt; std::is_integral&lt; T &gt;::value
         <tr>
           <td class="memname">void otus::IpPrinter::print </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">T&#160;</td>
           <td class="paramname"><em>ip</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -234,7 +237,7 @@ template&lt;typename T , std::enable_if_t&lt; std::is_integral&lt; T &gt;::value
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , std::enable_if_t&lt; is_sequential_container&lt; T &gt;::value, void * &gt;  = nullptr&gt; </div>
+template&lt;typename T , std::enable_if_t&lt; is_sequential_container&lt; T &gt;::value &gt; *  = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">

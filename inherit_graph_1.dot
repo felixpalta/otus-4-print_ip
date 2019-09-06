@@ -8,4 +8,8 @@ digraph "Graphical Class Hierarchy"
   Node2 [label="otus::is_sequential\l_container\< std::list\l\< T, Alloc \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structotus_1_1is__sequential__container_3_01std_1_1list_3_01T_00_01Alloc_01_4_01_4.html",tooltip="Positive case for std::list type trait. "];
   Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="otus::is_sequential\l_container\< std::vector\l\< T, Alloc \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structotus_1_1is__sequential__container_3_01std_1_1vector_3_01T_00_01Alloc_01_4_01_4.html",tooltip="Positive case for std::vector type trait. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="otus::is_string_like\l\< const char * \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structotus_1_1is__string__like_3_01const_01char_01_5_01_4.html"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="otus::is_string_like\l\< std::basic_string\<\l CharType, Traits, Alloc \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structotus_1_1is__string__like_3_01std_1_1basic__string_3_01CharType_00_01Traits_00_01Alloc_01_4_01_4.html",tooltip="Positive case for std::vector type trait. "];
 }
