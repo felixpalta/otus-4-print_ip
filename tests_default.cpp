@@ -26,9 +26,12 @@ TEST_F(OssFixture, IntTest) {
 }
 
 TEST_F(OssFixture, StringTest) {
-    std::string s = "foobar";
-    p.print(s);
-    ASSERT_EQ(s, oss.str());
+
+    p.print("foo"); // string literal (const char [])
+    const char * cs = "bar";
+    p.print(cs);
+    p.print(std::string("baz"));
+    ASSERT_EQ("foobarbaz", oss.str());
 }
 
 TEST_F(OssFixture, VectorTest) {

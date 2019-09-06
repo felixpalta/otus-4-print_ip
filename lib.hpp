@@ -11,7 +11,7 @@ namespace otus {
  * @brief Default (negative) case for string type
  */
 template <typename T>
-struct is_string : public std::false_type
+struct is_string_like : public std::false_type
 {};
 
 /**
@@ -19,7 +19,11 @@ struct is_string : public std::false_type
  */
 template <>
 template <typename CharType, typename Traits, typename Alloc>
-struct is_string<std::basic_string<CharType, Traits, Alloc>> : public std::true_type
+struct is_string_like<std::basic_string<CharType, Traits, Alloc>> : public std::true_type
+{};
+
+template <>
+struct is_string_like<const char *> : public std::true_type
 {};
 
 /**
@@ -86,7 +90,7 @@ struct IpPrinter
      * @brief Implementation for string IPs
      * @param ip Input string
      */
-    template <typename T, std::enable_if_t<is_string<T>::value>* = nullptr>
+    template <typename T, std::enable_if_t<is_string_like<T>::value>* = nullptr>
     void print(T ip) const {
         _os << ip;
         if (!_lineEnd.empty())
